@@ -3,12 +3,20 @@ import { NavConfig } from "types"
 export const navConfig: NavConfig = {
   mainNav: [
     {
-      title: "Features",
-      href: "/#features",
+      title: "About",
+      href: "/#about",
     },
     {
       title: "Blog",
-      href: "/blog",
+      href: "/#blog",
+    },
+    {
+      title: "Projects",
+      href: "/#projects",
+    },
+    {
+      title: "Contact",
+      href: "/#blog",
     },
   ],
 }

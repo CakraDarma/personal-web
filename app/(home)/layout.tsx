@@ -1,8 +1,8 @@
 import Link from "next/link"
 
 import { navConfig } from "@/config/nav"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { siteConfig } from "@/config/site"
+import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -17,16 +17,13 @@ export default async function MarketingLayout({
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
-          <MainNav items={navConfig.mainNav} />
-          <Link
-            href="/login"
-            className={cn(
-              buttonVariants({ variant: "secondary", size: "sm" }),
-              "px-4"
-            )}
-          >
-            Login
+          <Link href="/" className="hidden items-center space-x-2 md:flex">
+            <Icons.logo />
+            <span className="hidden font-bold sm:inline-block">
+              {siteConfig.name}
+            </span>
           </Link>
+          <MainNav items={navConfig.mainNav} />
         </div>
       </header>
       <main className="flex-1">{children}</main>
