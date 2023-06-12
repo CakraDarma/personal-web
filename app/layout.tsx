@@ -30,20 +30,14 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
-  ],
+  keywords: ["Next.js", "Blog", "CakraDarma", "Portofolio,", "Personal Web"],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "CakraDarma",
+      url: "https://cakradarma.id",
     },
   ],
-  creator: "shadcn",
+  creator: "CakraDarma",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -61,7 +55,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    creator: "@CakraDarma",
   },
   icons: {
     icon: "/favicon.ico",
