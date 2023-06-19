@@ -38,6 +38,10 @@ export type SiteConfig = {
   }
 }
 
+export type FootConfig = {
+  mainNav: MainNavItem[]
+}
+
 export type NavConfig = {
   mainNav: MainNavItem[]
 }

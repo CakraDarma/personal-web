@@ -11,6 +11,7 @@ import {
   HelpCircle,
   Image,
   Laptop,
+  Linkedin,
   Loader2,
   LucideProps,
   Menu,
@@ -52,6 +53,7 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  linkedin: Linkedin,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
