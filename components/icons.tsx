@@ -27,10 +27,15 @@ import {
   X,
   type Icon as LucideIcon,
 } from "lucide-react"
+import { SiGithub, SiLinkedin, SiMaildotru, SiTelegram } from "react-icons/si"
 
 export type Icon = LucideIcon
 
 export const Icons = {
+  github: SiGithub,
+  linkedin: SiLinkedin,
+  mail: SiMaildotru,
+  telegram: SiTelegram,
   menu: Menu,
   logo: Command,
   close: X,
@@ -53,7 +58,6 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
-  linkedin: Linkedin,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
@@ -101,6 +105,7 @@ export const Icons = {
       <path d="M1 1h22v22H1z" fill="none" />
     </svg>
   ),
+
   twitter: Twitter,
   check: Check,
 }

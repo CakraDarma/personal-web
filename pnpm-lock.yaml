@@ -92,6 +92,7 @@ specifiers:
   react-dom: ^18.2.0
   react-editor-js: ^2.1.0
   react-hook-form: ^7.43.9
+  react-icons: ^4.9.0
   react-textarea-autosize: ^8.4.1
   rehype: ^12.0.1
   rehype-autolink-headings: ^6.1.1
@@ -177,6 +178,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-editor-js: 2.1.0_zxarmw3p2pxcs632a2b5chqv2a
   react-hook-form: 7.43.9_react@18.2.0
+  react-icons: 4.9.0_react@18.2.0
   react-textarea-autosize: 8.4.1_3hx2ussxxho4jajbwrd6gq34qe
   sharp: 0.31.3
   shiki: 0.11.1
@@ -6918,6 +6920,14 @@ packages:
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-icons/4.9.0_react@18.2.0:
+    resolution: {integrity: sha512-ijUnFr//ycebOqujtqtV9PFS7JjhWg0QU6ykURVHuL4cbofvRCf3f6GMn9+fBktEFQOIVZnuAYLZdiyadRQRFg==}
+    peerDependencies:
+      react: '*'
     dependencies:
       react: 18.2.0
     dev: false
