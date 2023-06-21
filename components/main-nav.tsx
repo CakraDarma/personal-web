@@ -22,7 +22,7 @@ export function MainNav({ items, children }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       {items?.length ? (
-        <nav className="hidden gap-6 lg:flex">
+        <nav className="hidden gap-6 md:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
@@ -41,7 +41,7 @@ export function MainNav({ items, children }: MainNavProps) {
         </nav>
       ) : null}
       <button
-        className="flex items-center space-x-2 lg:hidden"
+        className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.menu />}

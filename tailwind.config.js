@@ -1,4 +1,5 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
+const colors = require("tailwindcss/colors")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
   ],
   darkMode: ["class"],
   theme: {
-    container: {
+    container2: {
       center: true,
       padding: "2rem",
       screens: {
@@ -19,15 +20,14 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: colors.blue,
+        ternary: colors.teal,
+        theme: colors.neutral,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -61,6 +61,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         heading: ["var(--font-heading)", ...fontFamily.sans],
+        primary: ['"Inter"', ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -71,10 +72,22 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        enter: {
+          "0%": { transform: "translateY(1.75rem)", opacity: "0" },
+          "50%": { transform: "translateY(0.75rem)", opacity: "0.5" },
+          "100%": { transform: "translateY(0)", scale: "1", opacity: "1" },
+        },
+        leave: {
+          "0%": { transform: "translateY(0)", scale: "1", opacity: "1" },
+          "50%": { transform: "translateY(0.75rem)", opacity: "0.5" },
+          "100%": { transform: "translateY(1.75rem)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        enter: "enter 0.15s ease-out",
+        leave: "leave 0.15s ease-out",
       },
     },
   },
