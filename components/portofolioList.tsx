@@ -4,33 +4,22 @@ import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
 import { formatDate } from "@/lib/utils"
+import { Skeleton } from "@/components/ui/skeleton"
 
-export const metadata = {
-  title: "Blog",
-}
-
-export default async function BlogPage() {
+export function PortfolioList() {
   const posts = allPosts
     .filter((post) => post.published)
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date))
     })
-
   return (
-    <div className="container max-w-4xl py-6 lg:py-10">
-      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
-        <div className="flex-1 space-y-4">
-          <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
-            Blog
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            A blog built using Contentlayer. Posts are written in MDX.
-          </p>
-        </div>
-      </div>
-      <hr className="my-8" />
+    <div className="max-w-4xl py-6 lg:py-10">
+      <h2 className="mb-1 md:mb-3">Featured Portofolio</h2>
+      <p className="mb-6 md:mb-8">
+        Check out my featured portfolio, feel free to explore it.
+      </p>
       {posts?.length ? (
-        <div className="grid gap-10 sm:grid-cols-2">
+        <div className="grid gap-10 md:grid-cols-2">
           {posts.map((post, index) => (
             <article
               key={post._id}
@@ -46,10 +35,8 @@ export default async function BlogPage() {
                   priority={index <= 1}
                 />
               )}
-              <h2 className="text-2xl font-extrabold">{post.title}</h2>
-              {post.description && (
-                <p className="text-muted-foreground">{post.description}</p>
-              )}
+              <h2 className="text-xl font-extrabold">{post.title}</h2>
+              {post.description && <p>{post.description}</p>}
               {post.date && (
                 <p className="text-sm text-muted-foreground">
                   {formatDate(post.date)}
@@ -64,6 +51,17 @@ export default async function BlogPage() {
       ) : (
         <p>No posts published.</p>
       )}
+    </div>
+  )
+}
+
+PortfolioList.Skeleton = function PostItemSkeleton() {
+  return (
+    <div className="p-4">
+      <div className="space-y-3">
+        <Skeleton className="h-5 w-2/5" />
+        <Skeleton className="h-4 w-4/5" />
+      </div>
     </div>
   )
 }

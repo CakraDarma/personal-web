@@ -9,6 +9,11 @@ const nextConfig = {
     domains: [
       "avatars.githubusercontent.com",
       "https://lh3.googleusercontent.com",
+      "ik.imagekit.io",
+      "og-image.vercel.app",
+      "media3.giphy.com",
+      "media0.giphy.com",
+      "github.com",
     ],
   },
   experimental: {
