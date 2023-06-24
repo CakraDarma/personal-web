@@ -1,7 +1,7 @@
 import Image from "next/image"
 
-import { SocialHome } from "@/components/ui/socialHome"
-import { PortfolioList } from "@/components/portofolioList"
+import { PortfolioList } from "@/components/portofolio-list"
+import { SocialHome } from "@/components/socialHome"
 
 export default async function IndexPage() {
   return (

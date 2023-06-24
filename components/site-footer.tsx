@@ -4,7 +4,7 @@ import { addRoute, appRoute } from "@/config/footer"
 import { UnstyledLink } from "@/components/ui/unstyledLinkProps"
 import { Icons } from "@/components/icons"
 
-import { SocialHome } from "./ui/socialHome"
+import { SocialHome } from "./socialHome"
 
 export function SiteFooter() {
   return (
