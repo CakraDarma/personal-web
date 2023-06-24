@@ -1,6 +1,4 @@
-import { NavConfig } from "types"
-
-export const navConfig: NavConfig = {
+export const navConfig = {
   mainNav: [
     {
       title: "Blog",
