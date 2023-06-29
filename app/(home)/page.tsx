@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion"
 
 import { PortfolioList } from "@/components/portofolio-list"
 import { SocialHome } from "@/components/socialHome"
